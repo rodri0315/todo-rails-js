@@ -1,0 +1,8 @@
+[x] rails new {name}
+1. rails new {app-name}
+2. rails g scaffold  TodoList title body(deleted after)
+  a. delete body html and code for body in index.erb, new, _form. Also from param in the controller.
+3. add, gem 'nested_scaffold'
+  a. //TODO add link
+4. rails g nested_scaffold TodoList/TodoItem description:text completed:boolean completed_at:datetime todo_list:references
+
