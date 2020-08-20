@@ -6,3 +6,8 @@
   a. //TODO add link
 4. rails g nested_scaffold TodoList/TodoItem description:text completed:boolean completed_at:datetime todo_list:references
 
+5. Add bootstrap
+  a. Delete scaffold scss(styling)
+6. Add styling to todo_list
+7. Add font-awesome
+

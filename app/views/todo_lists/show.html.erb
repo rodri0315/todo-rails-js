@@ -42,7 +42,10 @@
                     <span class="text-muted">
                       <%= todo_item.description %>
                     </span>
-                    <%= link_to '#', class: 'btn btn-dark' do %>
+                    <%= link_to '#', class: 'btn btn-dark', data: {
+                      reflex: 'click->TodoItem#mark_incomplete',
+                      id: todo_item.id
+                      } do %>
                       <%= fa_icon('times') %>
                     <% end %>
                   </div>
@@ -53,7 +56,10 @@
                     <span>
                       <%= todo_item.description %>
                     </span>
-                    <%= link_to '#', class: 'btn btn-info' do %>
+                    <%= link_to '#', class: 'btn btn-info', data: {
+                      reflex: 'click->TodoItem#mark_complete',
+                      id: todo_item.id
+                      } do %>
                       <%= fa_icon('check') %>
                     <% end %>
                   </div>
