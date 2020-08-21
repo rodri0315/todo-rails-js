@@ -3,20 +3,29 @@
     <div class="col-md-10 col-lg-8 offset-md-1 offset-lg-2">
       <p id="notice"><%= notice %></p>
       <div class="card mt-5">
-        <div class="card-header d-flex justify-content-between">
-          <div class="">
-            <h5 class="m0">
-              <strong>Title:</strong>
-              <%= @todo_list.title %>
-              <span class="badge badge-<%= @todo_list.badge_color  %>"><%= @todo_list.status %></span>
-            </h5>
-            <p class="text-secondary m0">
-              <%= @todo_list.percent_complete %> complete
-              (<%= @todo_list.completed_items %>/<%= @todo_list.total_items %> Todo Items)
-            </p>
-          </div>
-          <div>
-            <%= link_to 'Edit', edit_todo_list_path(@todo_list), class: 'btn btn-secondary' %>
+        <div class="card-header">
+          <div class="row">
+            <div class="col-1">
+              <%= link_to todo_lists_path, class: 'btn btn-dark' do %>
+              <%= fa_icon('angle-left') %>
+              <% end %>
+            </div>
+            <div class="col-11 d-flex justify-content-between">
+              <div class="">
+                <h5 class="m0">
+                  <strong>Title:</strong>
+                  <%= @todo_list.title %>
+                  <span class="badge badge-<%= @todo_list.badge_color  %>"><%= @todo_list.status %></span>
+                </h5>
+                <p class="text-secondary m0">
+                  <%= @todo_list.percent_complete %> complete
+                  (<%= @todo_list.completed_items %>/<%= @todo_list.total_items %> Todo Items)
+                </p>
+              </div>
+              <div>
+                <%= link_to 'Edit', edit_todo_list_path(@todo_list), class: 'btn btn-secondary' %>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card-body">
